@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "MiniScan",
-    "slug": "miniscan",
+    "name": "Pixnap",
+    "slug": "pixnap",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "scheme": "miniscan",
+    "scheme": "pixnap",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -17,8 +17,10 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "需要相机权限来拍摄票据",
-        "NSPhotoLibraryUsageDescription": "需要相册权限来选择票据图片"
-      }
+        "NSPhotoLibraryUsageDescription": "需要相册权限来选择票据图片",
+        "NSUserTrackingUsageDescription": "This allows Pixnap to show you relevant ads."
+      },
+      "bundleIdentifier": "com.anonymous.pixnap"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,14 +28,34 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "permissions": ["CAMERA"]
+      "permissions": [
+        "CAMERA",
+        "com.google.android.gms.permission.AD_ID",
+        "CAMERA",
+        "com.google.android.gms.permission.AD_ID"
+      ],
+      "package": "com.anonymous.pixnap"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      "expo-font",
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "需要相机权限来扫描文档"
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ],
+      "expo-tracking-transparency"
     ]
   }
 }

@@ -22,3 +22,10 @@ export interface ScanResult {
   width: number;
   height: number;
 }
+
+/** Filter preview thumbnails for each enhancement mode */
+export interface FilterPreviews {
+  bw: string;
+  gray: string;
+  color: string;
+}

@@ -12,7 +12,7 @@ import ar from './locales/ar.json';
 import ja from './locales/ja.json';
 import ko from './locales/ko.json';
 
-const LANGUAGE_KEY = 'miniscan_language';
+const LANGUAGE_KEY = 'pixnap_language';
 
 export const SUPPORTED_LANGUAGES = [
   { code: 'zh', label: '中文', flag: '🇨🇳' },

@@ -22,6 +22,7 @@ import Colors from '@/constants/Colors';
 import CornerSelector from '@/components/scanner/CornerSelector';
 import ImageProcessor, { ImageProcessorHandle } from '@/components/scanner/ImageProcessor';
 import { generatePdf } from '@/services/pdfService';
+import { checkAndShowAd } from '@/services/adService';
 import { detectDocument } from '@/modules/document-detection/src';
 import { SUPPORTED_LANGUAGES, changeLanguage } from '@/i18n';
 import type { ScannerCorners, EnhanceMode, ScanResult } from '@/types';
@@ -67,6 +68,7 @@ export default function ScanScreen() {
 
   const handleNativeScan = useCallback(async () => {
     try {
+      await checkAndShowAd();
       const result = await DocumentScanner.scanDocument({
         responseType: ResponseType.Base64,
         croppedImageQuality: 100,
@@ -97,6 +99,7 @@ export default function ScanScreen() {
 
   const handlePickLibrary = useCallback(async () => {
     try {
+      await checkAndShowAd();
       const pickerResult = await ImagePicker.launchImageLibraryAsync({
         quality: 1,
         mediaTypes: ['images'],

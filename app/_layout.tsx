@@ -1,13 +1,19 @@
+import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'react-native';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
 import Colors from '@/constants/Colors';
+import { initAds } from '@/services/adService';
 
 function RootStack() {
   const colorScheme = useColorScheme() ?? 'light';
   const { t } = useTranslation();
+
+  useEffect(() => {
+    initAds();
+  }, []);
 
   return (
     <>
