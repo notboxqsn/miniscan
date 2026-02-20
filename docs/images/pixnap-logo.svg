@@ -49,8 +49,7 @@
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="600" height="560" fill="url(#bgGrad)"/>
+  <!-- No background — transparent for seamless website integration -->
 
   <!-- ===== DOCUMENT ===== -->
   <g filter="url(#docShadow)">
