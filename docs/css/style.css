@@ -217,6 +217,12 @@ nav .container {
   padding: 40px 0 0;
 }
 
+.showcase h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 48px;
+}
+
 .showcase .features-grid {
   grid-template-columns: repeat(4, 1fr);
 }
