@@ -211,6 +211,54 @@ nav .container {
   color: var(--text-secondary);
 }
 
+/* ── Showcase ─────────────────────────────────── */
+
+.showcase {
+  padding: 60px 0;
+}
+
+.showcase h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 48px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.showcase-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+}
+
+.showcase-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Footer ──────────────────────────────────── */
 
 footer {
