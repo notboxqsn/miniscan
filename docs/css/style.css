@@ -14,8 +14,8 @@
   --bg-card-hover: #1c2230;
   --text: #e6edf3;
   --text-secondary: #8b949e;
-  --accent: #58a6ff;
-  --accent-gradient: linear-gradient(135deg, #58a6ff, #3dd6d0);
+  --accent: #40d8d0;
+  --accent-gradient: linear-gradient(135deg, #4de8e0, #40d8d0);
   --border: #30363d;
   --radius: 12px;
   --max-width: 960px;
@@ -113,7 +113,7 @@ nav .container {
   height: 120px;
   border-radius: 28px;
   margin-bottom: 32px;
-  box-shadow: 0 8px 32px rgba(88, 166, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(64, 216, 208, 0.15);
 }
 
 .hero-logo {
@@ -161,7 +161,7 @@ nav .container {
 
 .btn-appstore:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(88, 166, 255, 0.3);
+  box-shadow: 0 6px 24px rgba(64, 216, 208, 0.3);
   opacity: 1;
 }
 
